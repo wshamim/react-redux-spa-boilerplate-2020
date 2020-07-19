@@ -1,0 +1,35 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env", {
+        "targets": {
+          "browsers": [ "last 1 version", "ie >= 11" ]
+        }
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-flow"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-regenerator",
+    "@babel/plugin-syntax-dynamic-import",
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ]
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+        "@babel/preset-flow"
+      ]
+    }
+  }
+}
